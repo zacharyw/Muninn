@@ -13,8 +13,7 @@ give my applications a code name, usually based upon a mythological creature, an
 
 == Disclaimer
 
-While you're free to use this for whatever you want (though I'm not sure why you would), I make no 
-guarantees that I won't do something crazy to the codeline later, like switching from ActiveRecord to Mongoid or something. See project description above for why this may happen.
+While you're free to use this software as outlined in the license (though I'm not sure why you would), I make no guarantees that I won't do something crazy to the codeline later, like switching from ActiveRecord to Mongoid or something. See project description above for why this may happen.
 
 == License
 
