@@ -20,7 +20,7 @@ guarantees that I won't do something crazy to the codeline later, like switching
 
 (The MIT License)
 
-Copyright (c) 2009-2010 James Coglan
+Copyright (c) 2010 Zachary Wright
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
