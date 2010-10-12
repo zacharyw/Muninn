@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20101006031930) do
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "author"
+    t.integer  "user_id"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20101006031930) do
 
   create_table "topics", :force => true do |t|
     t.string   "name"
+    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
