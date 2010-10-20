@@ -7,8 +7,20 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="container">
+		<div id="header">
+			<div id="logo">
+				Muninn
+			</div>
+		</div>
+		<nav id="top_nav">
+			<ul id="main_nav">
+				<li><%=link_to "Articles", "#"%></li>
+				<li><%=link_to "About", "#"%></li>
+				<li><%=link_to "Subscribe", "#"%></li>
+			</ul>
+		</nav>
+		<%= yield %>
+	</div>
 </body>
 </html>

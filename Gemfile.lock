@@ -36,6 +36,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     gravtastic (2.2.0)
+    haml (3.0.21)
     i18n (0.4.1)
     jquery-rails (0.2.1)
       rails (~> 3.0.0)
@@ -76,6 +77,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic
   gravtastic (>= 2.1.0)
+  haml
   jquery-rails
   rails (= 3.0.0)
   sqlite3-ruby

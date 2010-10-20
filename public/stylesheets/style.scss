@@ -1,0 +1,21 @@
+/*Colors*/
+$background_color: #440008;
+$main_color: #2d2618;
+$page_width: 960px;
+
+body, html
+{
+	background: #fff none repeat scroll 0 0;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font
+	{
+		family: 'lucida sans', Verdana, Arial, sans-serif, palatino, georgia, serif;
+		color: $main_color;
+	}
+}
+
+#container
+{
+	width: $page_width;
+}

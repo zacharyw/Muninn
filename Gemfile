@@ -4,6 +4,7 @@ gem 'rails', '3.0.0'
 gem 'jquery-rails'
 gem 'authlogic'
 gem 'gravtastic', '>= 2.1.0'
+gem 'haml'
 
 # Deploy with Capistrano
 # gem 'capistrano'
