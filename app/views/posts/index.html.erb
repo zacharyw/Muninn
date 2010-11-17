@@ -1,0 +1,6 @@
+<%= javascript_include_tag 'endless-page' %>
+
+<div id="posts">
+	<%= render :partial => @posts %>
+</div>
+<%= will_paginate @posts %>

@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'authlogic'
 gem 'gravtastic', '>= 2.1.0'
 gem 'haml'
+gem 'will_paginate', '3.0.pre2'
 
 # Deploy with Capistrano
 # gem 'capistrano'
