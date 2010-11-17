@@ -1,0 +1,50 @@
+<div class="post">
+	<h2 class="post-title">
+		<%= @post.title %>
+	</h2>
+	<div class="post-date">
+		<%= @post.created_at %>
+	</div>
+	<div class="post-content">
+		<%= @post.content %>
+	</div>
+	<div class="post-comments">
+		<%= render :partial => @post.comments %>
+	</div>
+</div>
+<div class="reply">
+	<h3 class="reply-title">Post a comment...</h3>
+	<div class="reply-form">
+		<%= form_for([@post, @post.comments.build]) do |form| %>
+			<dl>
+				<dt>
+					<%= form.label :Name %>
+				</dt>
+				<dd>
+					<%= form.text_field :author %>
+				</dd>
+				<dt>
+					<%= form.label :Website %>
+				</dt>
+				<dd>
+					<%= form.url_field :webpage %>
+				</dd>
+				<dt>
+					<%= form.label :Email%>
+				</dt>
+				<dd>
+					<%= form.email_field :email%>
+				</dd>
+				<dt>
+					<%= form.label :Comment%>
+				</dt>
+				<dd>
+					<%= form.text_area :content%>
+				</dd>
+				<p class="submit">
+					<%= form.submit "Post this comment" %>
+				</p>
+			</dl>
+		<% end %>
+	</div>
+</div>
