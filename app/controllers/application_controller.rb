@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 	helper :all
   protect_from_forgery
   
-  helper_method :current_user, :current_user_session
+  helper_method :current_user, :current_user_session, :installed?
   
   private
     def current_user_session
@@ -14,6 +14,11 @@ class ApplicationController < ActionController::Base
       return @current_user if defined?(@current_user)
       @current_user = current_user_session && current_user_session.record
     end
+    
+    def installed?
+    	return @installed if defined?(@installed)
+    	@installed = !User.first.nil?	
+  	end
     
     def require_user
       unless current_user

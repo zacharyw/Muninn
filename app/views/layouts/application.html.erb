@@ -25,6 +25,12 @@
 				<li><%=link_to "Articles", "#"%></li>
 				<li><%=link_to "About", "#"%></li>
 				<li><%=link_to "Subscribe", "#"%></li>
+				<% if !installed? %>
+					<li><%=link_to "Setup", setup_path%></li>
+				<% end %>
+				<% if current_user %>
+					<li><%=link_to "New Post", new_post_path%></li>
+				<% end %>
 			</ul>
 		</nav>
 		<%= yield %>

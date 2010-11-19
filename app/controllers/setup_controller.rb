@@ -1,3 +1,0 @@
-class SetupController < ApplicationController
-	
-end
