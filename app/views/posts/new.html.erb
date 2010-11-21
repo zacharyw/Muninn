@@ -1,29 +1,7 @@
-<% content_for :script do %>
-	<%= javascript_include_tag 'tiny_mce/tiny_mce.js'%>
-	<script type="text/javascript" >
-		tinyMCE.init({
-			mode : "textareas",
-			theme : "simple"
-		});
-	</script >
-<% end %>
+<%= render(:layout => "post_editor", :locals => { :post => @post }) do %>
 <h1 class="page-title">
 	New Post
 </h1>
-<div class="new-post">
-<%= form_for @post do |form| %>
-	<%= render(:partial => "partials/errors", :locals => {:item => @post}) %>
-	<dl>
-		<dt><%= form.label :Title %></dt>
-		<dd><%= form.text_field :title %></dd>
-		<p class="new-post-content">
-			<%= form.text_area :content %>
-		</p>
-		<p class="submit">
-			<%= form.submit "Post" %>
-		</p>
-	</dl>
 <% end %>
-</div>
 
 

@@ -8,4 +8,12 @@
 	<div class=<%=style_class + "-content"%>>
 		<%= raw post.content %>
 	</div>
+	<div class=<%=style_class + "-edit"%>>
+		<%= link_to "Edit Post", edit_post_path(post)%>
+	</div>
+	<div class=<%=style_class + "-delete"%>>
+		<%= link_to 'Delete Post', post,
+               :confirm => 'Are you sure you want to delete this post forever?',
+               :method => :delete %>
+	</div>
 </div>

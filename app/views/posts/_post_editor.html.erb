@@ -1,0 +1,27 @@
+<% content_for :script do %>
+	<%= javascript_include_tag 'tiny_mce/tiny_mce.js'%>
+	<script type="text/javascript" >
+		tinyMCE.init({
+			mode : "textareas",
+			theme : "simple"
+		});
+	</script >
+<% end %>
+
+<%= yield %>
+
+<div class="post-form">
+<%= form_for post do |form| %>
+	<%= render(:partial => "partials/errors", :locals => {:item => post}) %>
+	<dl>
+		<dt><%= form.label :Title %></dt>
+		<dd><%= form.text_field :title %></dd>
+		<p class="post-content">
+			<%= form.text_area( :content, :size => "90x35") %>
+		</p>
+		<p class="submit">
+			<%= form.submit "Submit" %>
+		</p>
+	</dl>
+<% end %>
+</div>
