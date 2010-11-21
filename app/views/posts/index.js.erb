@@ -1,1 +1,1 @@
-$("#posts").append("<%=escape_javascript(render(:partial => @posts))%>" );
+$("#posts").append("<%=escape_javascript(render :partial => "entry", :collection => @posts, :locals => {:style_class => "entry"})%>" );

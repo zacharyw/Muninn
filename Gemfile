@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 gem 'jquery-rails'
-gem 'authlogic'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'gravtastic', '>= 2.1.0'
 gem 'haml'
 gem 'will_paginate', '3.0.pre2'

@@ -1,21 +1,12 @@
-<div class="post">
-	<h2 class="post-title">
-		<%= @post.title %>
-	</h2>
-	<div class="post-date">
-		<%= @post.created_at %>
-	</div>
-	<div class="post-content">
-		<%= @post.content %>
-	</div>
-	<div class="post-comments">
+<%= render :partial => @post, :locals => {:style_class => "full"}%>
+<div class="comments">
 		<%= render :partial => @post.comments %>
 	</div>
-</div>
 <div class="reply">
 	<h3 class="reply-title">Post a comment...</h3>
 	<div class="reply-form">
 		<%= form_for([@post, @post.comments.build]) do |form| %>
+		<%= render(:partial => "partials/errors", :locals => {:item => @comment}) %>
 			<dl>
 				<dt>
 					<%= form.label :Name %>

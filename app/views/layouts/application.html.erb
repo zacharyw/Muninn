@@ -5,12 +5,13 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <%= yield :script %>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
 			<div id="logo">
-				Muninn
+				<%= link_to "Muninn", root_path %>
 				<!-- 
 					The "Muninn" logo is an adaptation of a work by DUCKMARX.
 					The original work can be found here: http://www.flickr.com/photos/duckmarx/4422066759/
@@ -22,9 +23,9 @@
 		</div>
 		<nav id="top_nav">
 			<ul id="main_nav">
-				<li><%=link_to "Articles", "#"%></li>
 				<li><%=link_to "About", "#"%></li>
 				<li><%=link_to "Subscribe", "#"%></li>
+				<li><%=link_to "Archives", "#"%></li>
 				<% if !installed? %>
 					<li><%=link_to "Setup", setup_path%></li>
 				<% end %>

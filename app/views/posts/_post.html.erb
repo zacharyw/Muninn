@@ -1,14 +1,11 @@
-<div class="entry">
-	<h2 class="entry-title">
-		<%= post.title %>
+<div class=<%=style_class + "-post"%>>
+	<h2 class=<%=style_class + "-title"%>>
+		<%= link_to post.title, post_path(post) %>
 	</h2>
-	<div class="entry-date">
+	<div class=<%=style_class + "-date"%>>
 		<%= post.created_at %>
 	</div>
-	<div class="entry-content">
-		<%= post.content %>
-	</div>
-	<div class="entry-comments">
-		<%= link_to ("Comments (" + post.comments.size.to_s + ")"), post_path(post) %>
+	<div class=<%=style_class + "-content"%>>
+		<%= raw post.content %>
 	</div>
 </div>

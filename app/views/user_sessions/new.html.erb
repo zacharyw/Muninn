@@ -1,0 +1,14 @@
+<h1>Login</h1>
+<p>Login below.</p>
+<div class="login-form">
+	<%= form_for @user_session do |form|%>
+		<dl>
+			<dt><%= form.label :Username %></dt>
+			<dd><%= form.text_field :login %></dd>
+			<dt><%= form.label :Password %></dt>
+			<dd><%= form.password_field :password %></dd>
+			<p class="submit">
+				<%= form.submit "Login" %>
+			</p>
+	<% end%>
+</div>

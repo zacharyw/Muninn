@@ -1,0 +1,6 @@
+<div class="entry">
+	<%= render :partial => "post", :locals => {:style_class => "entry", :post => entry}%>
+	<div class="entry-comments">
+		<%= link_to ("Comments (" + entry.comments.size.to_s + ")"), post_path(entry) %>
+	</div>
+</div>
