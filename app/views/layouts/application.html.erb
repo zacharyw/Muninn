@@ -10,21 +10,19 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<div id="logo">
-				<%= link_to "Muninn", root_path %>
+			<%= link_to(image_tag("big_logo.png"), root_path)%>
 				<!-- 
 					The "Muninn" logo is an adaptation of a work by DUCKMARX.
 					The original work can be found here: http://www.flickr.com/photos/duckmarx/4422066759/
 					This logo is released under the following license: http://creativecommons.org/licenses/by-nc-sa/3.0/
 				 -->
-			</div>
-			<div id="search">
-			</div>
 		</div>
-		<nav id="top_nav">
-			<ul id="main_nav">
+		<nav id="top-nav">
+			<ul id="main-nav">
+				<li><%=link_to "Home", root_url%></li>
 				<li><%=link_to "About", "#"%></li>
 				<li><%=link_to "Subscribe", "#"%></li>
+				<li><%=link_to "Archives", "#"%></li>
 				<% if !installed? %>
 					<li><%=link_to "Setup", setup_path%></li>
 				<% end %>
@@ -33,7 +31,9 @@
 				<% end %>
 			</ul>
 		</nav>
-		<%= yield %>
+		<div id="inner-container">
+			<%= yield %>
+		</div>
 	</div>
 </body>
 </html>

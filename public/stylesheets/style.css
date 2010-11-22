@@ -1,11 +1,76 @@
 /*Colors*/
 body, html {
-  background: #fff none repeat scroll 0 0;
+  background: #333333 none repeat scroll 0 0;
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
-  body font, html font {
-    family: 'lucida sans', Verdana, Arial, sans-serif, palatino, georgia, serif;
-    color: #2d2618; }
+
+img {
+  border: none; }
+
+#header {
+  height: 270px;
+  border-bottom: 5px solid #eeeeee;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0; }
 
 #container {
-  width: 960px; }
+  position: relative;
+  display: block;
+  background-color: #fff;
+  width: 980px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #000000;
+  border-top: none; }
+
+#top-nav {
+  position: absolute;
+  right: 50px;
+  top: 255px; }
+
+#main-nav {
+  list-style: none outside none;
+  display: block; }
+  #main-nav li {
+    float: left;
+    font-size: 1.1em;
+    margin-left: 3px; }
+    #main-nav li a {
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      background: none repeat scroll 0 0 #eeeeee;
+      color: #a6a6a6;
+      display: block;
+      padding: 4px 10px 6px;
+      text-decoration: none; }
+      #main-nav li a:hover {
+        background-color: #F2F2F2;
+        color: red; }
+
+a {
+  color: red;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+#inner-container {
+  margin-left: 15px;
+  width: 580px; }
+
+.post {
+  font-family: Arial, Verdana, sans-serif, palatino, georgia, serif;
+  font-size: .9em;
+  color: #2d2618; }
+  .post .title a {
+    color: #2d2618; }
+    .post .title a:hover {
+      color: red; }
+
+.entry .date {
+  display: inline;
+  color: #a6a6a6; }
+.entry .entry-comments {
+  display: inline; }
+  .entry .entry-comments a {
+    color: #a6a6a6; }
+    .entry .entry-comments a:hover {
+      color: red; }

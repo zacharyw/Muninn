@@ -1,21 +1,135 @@
 /*Colors*/
-$background_color: #440008;
+$background_color: #333333;
 $main_color: #2d2618;
-$page_width: 960px;
+$aux_color: #eee;
+$link_color: #f00;
+
+$page_width: 980px;
+
+@mixin link_hover
+{
+	&:hover
+	{
+		color: $link_color;
+	}
+}
 
 body, html
 {
-	background: #fff none repeat scroll 0 0;
+	background: $background_color none repeat scroll 0 0;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	font
-	{
-		family: 'lucida sans', Verdana, Arial, sans-serif, palatino, georgia, serif;
-		color: $main_color;
-	}
+}
+
+img
+{
+	border: none;
+}
+
+#header
+{
+	height: 270px;
+	border-bottom: 5px solid $aux_color;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
 }
 
 #container
 {
+	position: relative;
+	display: block;
+	background-color: #fff;
 	width: $page_width;
+	margin: 0 auto 0 auto;
+	border: 1px solid #000000;
+	border-top: none;
+}
+
+#top-nav
+{
+	position: absolute;
+	right: 50px;
+	top: 255px;
+}
+
+#main-nav
+{
+	list-style: none outside none;
+	display: block;
+	
+	li
+	{
+		float: left;
+		font-size: 1.1em;
+		margin-left: 3px;
+		
+		a
+		{
+			-moz-border-radius-bottomleft: 5px;
+			-moz-border-radius-bottomright: 5px;
+			background: none repeat scroll 0 0 $aux_color;
+			color: $aux_color*.7;
+			display: block;
+			padding: 4px 10px 6px;
+			text-decoration: none;
+			
+			&:hover
+			{
+				background-color: #F2F2F2;
+				color: $link_color;
+			}
+		}
+	}
+}
+
+a
+{
+	color: $link_color;
+	text-decoration: none;
+	
+	&:hover
+	{
+		text-decoration: underline;
+	}
+}
+
+#inner-container
+{
+	margin-left: 15px;
+	width: 580px;
+}
+
+.post
+{	
+	font-family: Arial, Verdana, sans-serif, palatino, georgia, serif;
+	font-size: .9em;
+	color: $main_color;
+	
+	.title
+	{
+		a
+		{
+			color: $main_color;
+			@include link_hover;
+		}
+	}
+}
+
+.entry 
+{
+	.date
+	{
+		display: inline;
+		color: $aux_color*.7;
+	}
+		
+	.entry-comments
+	{
+		a
+		{
+			color: $aux_color*.7;
+			@include link_hover;
+		}
+		display: inline;
+	}
 }
