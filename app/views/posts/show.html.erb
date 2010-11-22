@@ -1,7 +1,10 @@
-<%= render :partial => @post, :locals => {:style_class => "full"}%>
+<%= render :partial => @post %>
+<div class=<%="date"%>>
+	<%= @post.created_at.strftime("Posted on %m/%d/%Y at %I:%M %p") %>
+</div>
 <div class="comments">
-		<%= render :partial => @post.comments %>
-	</div>
+	<%= render :partial => @post.comments %>
+</div>
 <div class="reply">
 	<h3 class="reply-title">Post a comment...</h3>
 	<div class="reply-form">

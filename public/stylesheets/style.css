@@ -65,12 +65,13 @@ a {
     .post .title a:hover {
       color: red; }
 
-.entry .date {
-  display: inline;
-  color: #a6a6a6; }
 .entry .entry-comments {
   display: inline; }
   .entry .entry-comments a {
     color: #a6a6a6; }
     .entry .entry-comments a:hover {
       color: red; }
+
+.date {
+  display: inline;
+  color: #a6a6a6; }

@@ -116,13 +116,7 @@ a
 }
 
 .entry 
-{
-	.date
-	{
-		display: inline;
-		color: $aux_color*.7;
-	}
-		
+{		
 	.entry-comments
 	{
 		a
@@ -132,4 +126,10 @@ a
 		}
 		display: inline;
 	}
+}
+
+.date
+{
+	display: inline;
+	color: $aux_color*.7;
 }
