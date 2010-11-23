@@ -2,6 +2,7 @@
 <div class=<%="date"%>>
 	<%= @post.created_at.strftime("Posted on %m/%d/%Y at %I:%M %p") %>
 </div>
+<h2 class="comments-header">Comments</h2>
 <div class="comments">
 	<%= render :partial => @post.comments %>
 </div>
@@ -28,6 +29,7 @@
 				</dt>
 				<dd>
 					<%= form.email_field :email%>
+					<span class="email-explanation">Will not be shown, only used to display gravatar.</span>
 				</dd>
 				<dt>
 					<%= form.label :Comment%>
