@@ -1,8 +1,8 @@
 <%= render :partial => @post %>
 <div class=<%="date"%>>
-	<%= @post.created_at.strftime("Posted on %m/%d/%Y at %I:%M %p") %>
+	<%= @post.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
 </div>
-<h2 class="comments-header">Comments</h2>
+<h3 class="comments-header">Comments</h3>
 <div class="comments">
 	<%= render :partial => @post.comments %>
 </div>
@@ -35,7 +35,7 @@
 					<%= form.label :Comment%>
 				</dt>
 				<dd>
-					<%= form.text_area :content%>
+					<%= form.text_area :content, :rows => 10, :cols => 24%>
 				</dd>
 				<p class="submit">
 					<%= form.submit "Post this comment" %>

@@ -1,26 +1,27 @@
 <div class="comment">
-	<h3 class="comment-data">
-		<span class="comment-author">
-			<%=comment.author%>
-		</span>
-		<span class="comment-date">
-			<%=comment.created_at%>
-		</span> 
-	</h3>
-	<div class="comment-email">
-		<%=comment.email%>
-	</div>
-	<div class="comment-webpage">
-		<%=comment.webpage%>
-	</div>
-	<div class="comment-content">
-		<%=comment.content%>
-	</div>
-	<% if current_user %>
-		<p>
-			<%= link_to 'Delete Comment', [comment.post, comment],
-               :confirm => 'Are you sure you want to delete this comment forever?',
-               :method => :delete %>
-		</p>
-	<% end %>
+		<div class="gravatar">
+			<%= image_tag raw(comment.gravatar_url) %>
+		</div>
+		<div class="comment-container">
+			<div class="comment-content">
+					<%=auto_link comment.content%>
+			</div>
+			<div class="comment-author">
+				<div class="author">
+					<%=comment.author + comment.created_at.strftime(" on %B %d, %Y at %I:%M %p") %>
+				</div>
+				<% if !comment.webpage.empty? %>
+					<div class="webpage">
+						<%= auto_link comment.webpage %>
+					</div>
+				<% end %>
+			</div>
+			<% if current_user %>
+				<p>
+					<%= link_to 'Delete Comment', [comment.post, comment],
+		               :confirm => 'Are you sure you want to delete this comment forever?',
+		               :method => :delete %>
+				</p>
+			<% end %>
+		</div>
 </div>

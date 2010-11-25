@@ -56,8 +56,11 @@ a {
   margin-left: 15px;
   width: 580px; }
 
-.post {
+.post, .comment, .comments-header, .page-header {
   font-family: Arial, Verdana, sans-serif, palatino, georgia, serif;
+  color: #2d2618; }
+
+.post {
   font-size: .9em;
   color: #2d2618; }
   .post .title a {
@@ -71,6 +74,36 @@ a {
     color: #a6a6a6; }
     .entry .entry-comments a:hover {
       color: red; }
+
+.comments-header {
+  margin-bottom: 10px;
+  color: #a6a6a6; }
+
+.comment {
+  font-size: .8em;
+  background-color: #eeeeee;
+  padding: 5px;
+  margin-bottom: 10px;
+  min-height: 60px;
+  line-height: 17px; }
+  .comment .comment-container {
+    display: table-cell;
+    vertical-align: top; }
+  .comment .gravatar {
+    display: block;
+    float: left;
+    margin-right: 10px; }
+  .comment .comment-content, .comment .comment-author {
+    display: block;
+    vertical-align: top;
+    word-wrap: break-word; }
+  .comment .comment-author {
+    margin-top: 10px;
+    margin-left: 20px; }
+
+div.reply dd textarea {
+  width: 400px;
+  font-family: Arial, Verdana, sans-serif, palatino, georgia, serif; }
 
 .date {
   display: inline;
