@@ -187,6 +187,42 @@ a
 	}
 }
 
+div.reply-form 
+{
+	dt
+	{
+		text-align: right;
+		clear: left;
+		float: left;
+		width: 70px;
+		margin-top: 7px;
+	}
+	
+	dt.text-area-label
+	{
+		float: none;
+		text-align: left;
+	}
+	
+	dd.text-area-field
+	{
+		margin-left: 0px;
+	}
+	
+	dd
+	{
+		text-align: left;
+		margin-left: 80px;
+		margin-bottom: 10px;
+		
+		.email-explanation
+		{
+			font-size: .8em;
+			font-style: italic;
+		}
+	}
+}
+
 div.reply dd textarea
 {
 	width: 400px;

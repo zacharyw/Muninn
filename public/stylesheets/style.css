@@ -108,6 +108,25 @@ a {
     .comment .comment-author .author {
       font-weight: bold; }
 
+div.reply-form dt {
+  text-align: right;
+  clear: left;
+  float: left;
+  width: 70px;
+  margin-top: 7px; }
+div.reply-form dt.text-area-label {
+  float: none;
+  text-align: left; }
+div.reply-form dd.text-area-field {
+  margin-left: 0px; }
+div.reply-form dd {
+  text-align: left;
+  margin-left: 80px;
+  margin-bottom: 10px; }
+  div.reply-form dd .email-explanation {
+    font-size: .8em;
+    font-style: italic; }
+
 div.reply dd textarea {
   width: 400px; }
 

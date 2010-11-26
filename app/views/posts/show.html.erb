@@ -29,12 +29,12 @@
 				</dt>
 				<dd>
 					<%= form.email_field :email%>
-					<span class="email-explanation">Will not be shown, only used to display gravatar.</span>
+					<div class="email-explanation">Will not be shown or shared, only used to display <a href="http://www.gravatar.com">gravatar</a>.</div>
 				</dd>
-				<dt>
-					<%= form.label :Comment, :class => "required"%>
+				<dt class="text-area-label">
+					<%= form.label :Comments, :class => "required"%>
 				</dt>
-				<dd>
+				<dd class="text-area-field">
 					<%= form.text_area :content, :rows => 10, :cols => 24%>
 				</dd>
 				<p class="submit">
