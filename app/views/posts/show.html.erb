@@ -13,7 +13,7 @@
 		<%= render(:partial => "partials/errors", :locals => {:item => @comment}) %>
 			<dl>
 				<dt>
-					<%= form.label :Name %>
+					<%= form.label :Name, :class => "required" %>
 				</dt>
 				<dd>
 					<%= form.text_field :author %>
@@ -32,7 +32,7 @@
 					<span class="email-explanation">Will not be shown, only used to display gravatar.</span>
 				</dd>
 				<dt>
-					<%= form.label :Comment%>
+					<%= form.label :Comment, :class => "required"%>
 				</dt>
 				<dd>
 					<%= form.text_area :content, :rows => 10, :cols => 24%>
