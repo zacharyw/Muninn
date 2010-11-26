@@ -2,10 +2,12 @@
 <div class=<%="date"%>>
 	<%= @post.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
 </div>
-<h3 class="comments-header">Comments</h3>
-<div class="comments">
-	<%= render :partial => @post.comments %>
-</div>
+<% if @post.comments.length > 0 %>
+	<h3 class="comments-header">Comments</h3>
+	<div class="comments">
+		<%= render :partial => @post.comments %>
+	</div>
+<% end %>
 <div class="reply">
 	<h3 class="reply-title">Post a comment...</h3>
 	<div class="reply-form">
