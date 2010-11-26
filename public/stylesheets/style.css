@@ -44,10 +44,10 @@ img {
       text-decoration: none; }
       #main-nav li a:hover {
         background-color: #F2F2F2;
-        color: red; }
+        color: #8200a8; }
 
 a {
-  color: red;
+  color: #8200a8;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -66,14 +66,14 @@ a {
   .post .title a {
     color: #2d2618; }
     .post .title a:hover {
-      color: red; }
+      color: #8200a8; }
 
 .entry .entry-comments {
   display: inline; }
   .entry .entry-comments a {
     color: #a6a6a6; }
     .entry .entry-comments a:hover {
-      color: red; }
+      color: #8200a8; }
 
 .comments-header {
   margin-bottom: 10px;
@@ -85,7 +85,9 @@ a {
   padding: 5px;
   margin-bottom: 10px;
   min-height: 60px;
-  line-height: 17px; }
+  line-height: 17px;
+  border-top: 1px dotted #a6a6a6;
+  border-bottom: 1px dotted #a6a6a6; }
   .comment .comment-container {
     display: table-cell;
     vertical-align: top; }
@@ -100,6 +102,8 @@ a {
   .comment .comment-author {
     margin-top: 10px;
     margin-left: 20px; }
+    .comment .comment-author .author {
+      font-weight: bold; }
 
 div.reply dd textarea {
   width: 400px;
