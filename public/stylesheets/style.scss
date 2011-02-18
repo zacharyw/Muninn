@@ -113,10 +113,13 @@ a
 	
 	.title
 	{
+		font-family: Verdana, sans-serif;
+		font-weight: bold;
 		a
 		{
 			color: $main_color;
 			@include link_hover;
+			text-decoration: none;
 		}
 	}
 }
@@ -130,6 +133,18 @@ a
 			color: $aux_color*.7;
 			@include link_hover;
 		}
+		display: inline;
+	}
+}
+
+div.share_controls
+{
+	margin-top: 6px;
+	margin-bottom: 50px;
+	
+	.twitter, .facebook
+	{
+		vertical-align: top;
 		display: inline;
 	}
 }

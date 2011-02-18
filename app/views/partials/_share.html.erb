@@ -1,0 +1,14 @@
+<div class="share_controls">
+	<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+	<div class="twitter">
+	   <a href="http://twitter.com/share" class="twitter-share-button"
+	      data-url=<%=url_for(:action => 'show', :controller=>'posts', :id=>post.id, :only_path => false)%>
+	      data-via="pragmaticzach"
+	      data-text=<%=post.title%>
+	      data-count="none">Tweet</a>
+	</div>
+	<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	<div class="facebook">
+		<fb:like href=<%=url_for(:action => 'show', :controller=>'posts', :id=>post.id, :only_path => false)%> layout="button_count" show_faces="false" width="450" action="recommend" font="arial"></fb:like>
+	</div>
+</div>

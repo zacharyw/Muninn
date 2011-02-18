@@ -2,6 +2,7 @@
 <div class=<%="date"%>>
 	<%= @post.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
 </div>
+<%= render :partial => "partials/share", :locals => {:post => @post}%>
 <% if @post.comments.length > 0 %>
 	<h3 class="comments-header">Comments</h3>
 	<div class="comments">
