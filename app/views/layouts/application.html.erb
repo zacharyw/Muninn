@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Muninn</title>
+  <title><%=title%></title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
   <%= csrf_meta_tag %>
-  <%=auto_discovery_link_tag(:rss, root_url, {:title => "Like a Writing Desk"})%>
+  <%=auto_discovery_link_tag(:rss, root_url, {:title => title})%>
   <%= yield :script %>
 </head>
 <body>
@@ -41,7 +41,9 @@
 		<div id="inner-container">
 			<%= yield %>
 		</div>
-		<%= render :partial=>'partials/sidebar'%>
+		<div id="sidebar">
+			<%= yield :sidebar %>
+		</div>
 		<div id="footer">
 		</div>
 	</div>

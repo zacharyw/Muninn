@@ -6,10 +6,28 @@
 		<%= form_for @user do |form| %>
 			<dl>
 				<dt>
+					<%= form.label :Title %>
+				</dt>
+				<dd>
+					<%= form.text_field :title %>
+				</dd>
+				<dt>
+					<%= form.label :Description %>
+				</dt>
+				<dd>
+					<%= form.text_field :description %>
+				</dd>
+				<dt>
 					<%= form.label :Username %>
 				</dt>
 				<dd>
 					<%= form.text_field :login %>
+				</dd>
+				<dt>
+					<%= form.label :Twitter %>
+				</dt>
+				<dd>
+					<%= form.text_field :twitter %>
 				</dd>
 				<dt>
 					<%= form.label :Email %>

@@ -75,6 +75,7 @@ a {
 
 .post {
   font-size: .9em;
+  line-height: 18px;
   color: #2d2618; }
   .post .title {
     font-family: Verdana, sans-serif;

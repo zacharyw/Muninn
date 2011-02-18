@@ -1,8 +1,8 @@
 xml.instruct! :xml, :version => "1.0" 
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "Like a Writing Desk"
-    xml.description "A blog about software development and living instead of surviving"
+    xml.title title
+    xml.description description
     xml.link posts_url
 
     for post in @posts
