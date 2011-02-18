@@ -3,6 +3,11 @@ class PostsController < ApplicationController
 	
 	def index
 		@posts = Post.paginate(:page => params[:page], :per_page => 3, :order => 'created_at DESC', :include => :comments)
+		
+		respond_to do |format|
+			format.rss { render :layout => false }
+			format.html
+		end
 	end
 	
 	def show

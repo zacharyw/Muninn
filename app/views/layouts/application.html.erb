@@ -8,6 +8,7 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
   <%= csrf_meta_tag %>
+  <%=auto_discovery_link_tag(:rss, root_url, {:title => "Like a Writing Desk"})%>
   <%= yield :script %>
 </head>
 <body>
@@ -24,7 +25,11 @@
 			<ul id="main-nav">
 				<li><%=link_to "Home", root_url%></li>
 				<li><%=link_to "About", "#"%></li>
-				<li><%=link_to "Subscribe", "#"%></li>
+				<li>
+					<%=link_to(root_url, {:type => "rss"}) do %>
+						Subscribe<%=image_tag("rss.png", :class=>"rss_image")%>
+					<% end %>
+				</li>
 				<% if !installed? %>
 					<li><%=link_to "Setup", setup_path%></li>
 				<% end %>
