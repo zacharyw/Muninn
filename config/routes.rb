@@ -6,9 +6,10 @@ Muninn::Application.routes.draw do
 	end
 	
 	match "setup" => "users#new"
+	match "properties" => "users#edit", :id => 1, :as => :properties
 	match "about" => "users#show", :id => 1, :as => :about
 	
-	resources :users, :only => [:create]
+	resources :users, :only => [:create, :edit, :update]
 	
 	resources :user_sessions
 	match 'admin' => "user_sessions#new",      :as => :admin

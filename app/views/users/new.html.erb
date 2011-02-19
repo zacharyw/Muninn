@@ -60,14 +60,14 @@
 		<% end %>
 	</div>
 	<% content_for :script do %>
-	<%= javascript_include_tag 'tiny_mce/tiny_mce.js'%>
-	<script type="text/javascript" >
-		tinyMCE.init({
-			mode : "textareas",
-			theme : "simple"
-		});
-	</script >
-<% end %>
+		<%= javascript_include_tag 'tiny_mce/tiny_mce.js'%>
+		<script type="text/javascript" >
+			tinyMCE.init({
+				mode : "textareas",
+				theme : "simple"
+			});
+		</script >
+	<% end %>
 <% else %>
 	<p>
 		Muninn is already installed. To reinstall, delete the database that Muninn is currently running on.
