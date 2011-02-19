@@ -1,25 +1,25 @@
 = Muninn
 
-Muninn is a Rails 3 application that will soon be developed into my personal blog. Muninn is meant to be a sandbox project for me to try new technologies in, and then write about them as I do.
+Muninn is an extremely lightweight single-user blog software running on Rails 3. Muninn is meant to be a sandbox project for me to try new technologies in, and then write about them as I do.
 
-== Why not Wordpress, Typepad, etc?
+== Installation
 
-Those platforms are great. Probably better than what this will end up being. But I need a relatively simple project to learn Rails 3, since it seems as though quite a bit has changed from Rails 2.
+Use your preferred method for deploying a Rails app and your preferred database on your preferred server. 
+Once running, click the "Setup" link in the top nav bar, and enter your info, then click "create blog".
+
+Use the top nav bar to manage posts/installation info. When you need to login, point your browser at www.yourwebsite.com/admin
 
 == What's in a name?
 
-Instead of wasting valuable coding time trying to think of a name for my future web sites I just 
-give my applications a code name, usually based upon a mythological creature, and then come up with a real name later.
+Muninn is one of Odin's two ravens, the other being Huginn, that flew all over Midgard and brought information back to Odin.
+
+Muninn is Old Norse for "memory".
 
 == Credits
 
 The "Muninn" logo is an adaptation of a work by DUCKMARX.
 The original work can be found here: http://www.flickr.com/photos/duckmarx/4422066759/
 This logo is released under the following license: http://creativecommons.org/licenses/by-nc-sa/3.0/
-
-== Disclaimer
-
-While you're free to use this software as outlined in the license (though I'm not sure why you would), I make no guarantees that I won't do something crazy to the codeline later, like switching from ActiveRecord to Mongoid or something. See project description above for why this may happen.
 
 == License
 
