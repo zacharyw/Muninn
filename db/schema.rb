@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101006031930) do
+ActiveRecord::Schema.define(:version => 20110218033301) do
 
   create_table "comments", :force => true do |t|
     t.string   "author"
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(:version => 20101006031930) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "description"
+    t.string   "twitter"
   end
 
 end
