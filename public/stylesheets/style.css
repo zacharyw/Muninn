@@ -57,7 +57,8 @@ a {
 #inner-container {
   margin-left: 15px;
   width: 580px;
-  float: left; }
+  float: left;
+  min-height: 600px; }
 
 #sidebar {
   float: right;

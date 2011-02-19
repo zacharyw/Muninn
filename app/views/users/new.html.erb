@@ -18,6 +18,12 @@
 					<%= form.text_field :description %>
 				</dd>
 				<dt>
+					<%= form.label :About %>
+				</dt>
+				<dd>
+					<%= form.text_area :about %>
+				</dd>
+				<dt>
 					<%= form.label :Username %>
 				</dt>
 				<dd>
@@ -53,6 +59,15 @@
 			</dl>
 		<% end %>
 	</div>
+	<% content_for :script do %>
+	<%= javascript_include_tag 'tiny_mce/tiny_mce.js'%>
+	<script type="text/javascript" >
+		tinyMCE.init({
+			mode : "textareas",
+			theme : "simple"
+		});
+	</script >
+<% end %>
 <% else %>
 	<p>
 		Muninn is already installed. To reinstall, delete the database that Muninn is currently running on.

@@ -4,7 +4,7 @@
 	<div class="twitter">
 	   <a href="http://twitter.com/share" class="twitter-share-button"
 	      data-url=<%=url_for(:action => 'show', :controller=>'posts', :id=>post.id, :only_path => false)%>
-	      data-via=<%=twitter_name%>
+	      data-via=<%=installation.twitter%>
 	      data-text=<%=post.title%>
 	      data-count="none">Tweet</a>
 	</div>

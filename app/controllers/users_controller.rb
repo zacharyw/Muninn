@@ -13,4 +13,8 @@ class UsersController < ApplicationController
       redirect_to setup_path
     end
   end
+  
+  def show
+  	@user = User.find(params[:id])
+	end
 end

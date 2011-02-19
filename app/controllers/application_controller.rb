@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 	helper :all
   protect_from_forgery
   
-  helper_method :current_user, :current_user_session, :installed?, :twitter_name, :title, :twitter?, :description
+  helper_method :current_user, :current_user_session, :installed?, :twitter?, :installation
   
   private
     def current_user_session
@@ -20,24 +20,16 @@ class ApplicationController < ActionController::Base
     	@installed = !User.first.nil?	
   	end
   	
-  	def title
+  	def installation
 			if installed? 
-				return User.first.title
+				User.first
 			else
-				return "Muninn"
+				User.new
 			end
 		end
-		
-		def description
-			return User.first.description
-		end
-			
-		def twitter_name
-			return User.first.twitter
-		end 
 			
 		def twitter?
-			return installed? && twitter_name
+			return installed? && installation.twitter
 		end
     
     def require_user

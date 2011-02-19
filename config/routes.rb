@@ -6,6 +6,7 @@ Muninn::Application.routes.draw do
 	end
 	
 	match "setup" => "users#new"
+	match "about" => "users#show", :id => 1, :as => :about
 	
 	resources :users, :only => [:create]
 	
