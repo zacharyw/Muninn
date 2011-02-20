@@ -2,72 +2,18 @@
 	Muninn Setup Wizard
 </h1>
 <% if !installed? %>
-	<div class="setup-form">
-		<%= form_for @user do |form| %>
-			<dl>
-				<dt>
-					<%= form.label :Title %>
-				</dt>
-				<dd>
-					<%= form.text_field :title %>
-				</dd>
-				<dt>
-					<%= form.label :Description %>
-				</dt>
-				<dd>
-					<%= form.text_field :description %>
-				</dd>
-				<dt>
-					<%= form.label :About %>
-				</dt>
-				<dd>
-					<%= form.text_area :about %>
-				</dd>
-				<dt>
-					<%= form.label :Username %>
-				</dt>
-				<dd>
-					<%= form.text_field :login %>
-				</dd>
-				<dt>
-					<%= form.label :Twitter %>
-				</dt>
-				<dd>
-					<%= form.text_field :twitter %>
-				</dd>
-				<dt>
-					<%= form.label :Email %>
-				</dt>
-				<dd>
-					<%= form.text_field :email %>
-				</dd>
-				<dt>
-					<%= form.label :Password %>
-				</dt>
-				<dd>
-					<%= form.password_field :password %>
-				</dd>
-				<dt>
-					<%= form.label :password_confirmation, "Repeat"%>
-				</dt>
-				<dd>
-					<%= form.password_field :password_confirmation %>
-				</dd>
-				<p class="submit">
-					<%= form.submit "Create blog" %>
-				</p>
-			</dl>
-		<% end %>
-	</div>
-	<% content_for :script do %>
-		<%= javascript_include_tag 'tiny_mce/tiny_mce.js'%>
-		<script type="text/javascript" >
-			tinyMCE.init({
-				mode : "textareas",
-				theme : "simple"
-			});
-		</script >
-	<% end %>
+	<%= standard_form_for @user do |form|%>
+		<%= form.text_field :title %>
+		<%= form.text_field :description %>
+		<%= form.text_area :about %>
+		<%= form.text_field :login %>
+		<%= form.text_field :twitter %>
+		<%= form.text_field :email %>
+		<%= form.password_field :password %>
+		<%= form.password_field :password_confirmation %>
+		<%= form.submit "Create Blog" %>
+	<%end%>
+	<%=render :partial => "partials/simple_mce"%>
 <% else %>
 	<p>
 		Muninn is already installed. To reinstall, delete the database that Muninn is currently running on.
