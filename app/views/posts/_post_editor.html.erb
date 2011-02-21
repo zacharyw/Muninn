@@ -10,18 +10,9 @@
 
 <%= yield %>
 
-<div class="post-form">
-<%= form_for post do |form| %>
-	<%= render(:partial => "partials/errors", :locals => {:item => post}) %>
-	<dl>
-		<dt><%= form.label :Title %></dt>
-		<dd><%= form.text_field :title %></dd>
-		<p class="post-content">
-			<%= form.text_area( :content, :size => "90x35") %>
-		</p>
-		<p class="submit">
-			<%= form.submit "Submit" %>
-		</p>
-	</dl>
+<%= standard_form_for @post do |form| %>
+	<%= render(:partial => "partials/errors", :locals => {:item => @post}) %>
+	<%= form.text_field :title %>
+	<%= form.text_area( :content, :size => "90x35") %>
+	<%= form.submit "Submit" %>
 <% end %>
-</div>
