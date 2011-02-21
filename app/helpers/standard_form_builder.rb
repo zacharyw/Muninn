@@ -4,13 +4,8 @@ class StandardFormBuilder < ActionView::Helpers::FormBuilder
 	
 			label_class = ""
 			if(!args[0].nil?)
-				if(!args[0][:label].nil?)
-					label = args[0][:label]
-				end
-				
-				if(!args[0][:label_class].nil?)
-					label_class = args[0][:label_class]
-				end
+				label = args[0][:label] if !args[0][:label].nil?
+				label_class = args[0][:label_class] if !args[0][:label_class].nil?
 			end
 			
 			@template.content_tag("dt",
