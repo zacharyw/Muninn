@@ -1,14 +1,16 @@
 class StandardFormBuilder < ActionView::Helpers::FormBuilder
 	def self.create_tagged_field(method_name)
 		define_method(method_name) do |label, *args|
-			
-			if(!args[0][:label].nil?)
-				label = args[0][:label]
-			end
-			
+	
 			label_class = ""
-			if(!args[0][:label_class].nil?)
-				label_class = args[0][:label_class]
+			if(!args[0].nil?)
+				if(!args[0][:label].nil?)
+					label = args[0][:label]
+				end
+				
+				if(!args[0][:label_class].nil?)
+					label_class = args[0][:label_class]
+				end
 			end
 			
 			@template.content_tag("dt",
