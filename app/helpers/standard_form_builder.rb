@@ -3,14 +3,15 @@ class StandardFormBuilder < ActionView::Helpers::FormBuilder
 		define_method(method_name) do |label, *args|
 	
 			label_class = ""
+			custom_label = label
 			if(!args[0].nil?)
-				label = args[0][:label] if !args[0][:label].nil?
+				custom_label = args[0][:label] if !args[0][:label].nil?
 				label_class = args[0][:label_class] if !args[0][:label_class].nil?
 			end
 			
 			@template.content_tag("dt",
 				@template.content_tag("label",
-															label.to_s.humanize,
+															custom_label.to_s.humanize,
 															:for => "#{@object_name}_#{label}", :class => label_class) ) +
 			@template.content_tag("dd", super(label, *args))
 		end
