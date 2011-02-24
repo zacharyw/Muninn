@@ -74,6 +74,11 @@ a {
 .post, .comment, .comments-header, .page-header {
   color: #2d2618; }
 
+#ajax-loader {
+  position: relative;
+  left: 200px;
+  margin-bottom: 10px; }
+
 .post {
   font-size: .9em;
   line-height: 18px;

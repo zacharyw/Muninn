@@ -10,6 +10,11 @@ $(document).ready(function(){
 		var scroll = function() {
 			if(nearBottomOfPage() && !loading)
 			{
+				if($("#ajax-loader").length==0)
+				{
+					$("div.entry").last().after("<div id='ajax-loader'><img src='images/ajax-loader.gif'/></div>");
+				}
+					
 				loading=true;
 				currentPage++;
 				$.ajax({
@@ -17,6 +22,7 @@ $(document).ready(function(){
 					data: 'page=' + currentPage,
 					dataType: 'script',
 					complete: function(){
+						$("#ajax-loader").remove();
 						loading=false;	
 					}
 				});
