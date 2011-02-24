@@ -10,4 +10,4 @@
 	<%= render :partial => "entry", :collection => @posts, :locals => {:style_class => "entry"} %>
 </div>
 
-<%= will_paginate @posts %>
+<%= paginate @posts %>

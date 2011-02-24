@@ -2,12 +2,7 @@ class PostsController < ApplicationController
 	before_filter :require_user, :except => [:index, :show]
 	
 	def index
-		@posts = Post.paginate(:page => params[:page], :per_page => 3, :order => 'created_at DESC', :include => :comments)
-		
-		respond_to do |format|
-			format.rss { render :layout => false }
-			format.html
-		end
+		@posts = Post.order("posts.created_at DESC").page(params[:page]).per(POSTS_PER_PAGE).includes(:comments)
 	end
 	
 	def show

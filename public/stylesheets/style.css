@@ -99,7 +99,8 @@ div.share_controls {
   margin-bottom: 50px; }
   div.share_controls .twitter, div.share_controls .facebook {
     vertical-align: top;
-    display: inline; }
+    display: inline;
+    cursor: pointer; }
 
 .rss_image {
   padding-left: 3px; }
