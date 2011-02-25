@@ -5,10 +5,11 @@
 	<%= standard_form_for @user do |form|%>
 		<%= form.text_field :title %>
 		<%= form.text_field :description %>
+		<%= form.check_box :enable_comments %>
 		<%= form.text_area :about %>
 		<%= form.text_field :login %>
 		<%= form.text_field :twitter %>
-		<%= form.text_field :email %>
+		<%= form.email_field :email %>
 		<%= form.password_field :password %>
 		<%= form.password_field :password_confirmation %>
 		<%= form.submit "Create Blog" %>

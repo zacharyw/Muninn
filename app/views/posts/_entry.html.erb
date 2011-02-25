@@ -1,10 +1,8 @@
 <div class="entry">
 	<%= render :partial => "post", :locals => {:post => entry}%>
 	<div class=<%="date"%>>
-		<%= entry.created_at.strftime("Posted on %B %d, %Y at %I:%M %p | ") %>
+		<%= entry.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
 	</div>
-	<div class="entry-comments">
-		<%= link_to ("Comments (" + entry.comments.size.to_s + ")"), post_path(entry) %>
-	</div>
+	<%= render :partial => "comments/entry_comments", :locals => {:entry => entry}%>
 	<%= render :partial => "partials/share", :locals => {:post => entry}%>
 </div>

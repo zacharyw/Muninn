@@ -6,47 +6,4 @@
 	<%= @post.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
 </div>
 <%= render :partial => "partials/share", :locals => {:post => @post}%>
-<% if @post.comments.length > 0 %>
-	<h3 class="comments-header">Comments</h3>
-	<div class="comments">
-		<%= render :partial => @post.comments %>
-	</div>
-<% end %>
-<div class="reply">
-	<h3 class="reply-title">Post a comment...</h3>
-	<div class="reply-form">
-		<%= form_for([@post, @post.comments.build]) do |form| %>
-		<%= render(:partial => "partials/errors", :locals => {:item => @comment}) %>
-			<dl>
-				<dt>
-					<%= form.label :Name, :class => "required" %>
-				</dt>
-				<dd>
-					<%= form.text_field :author %>
-				</dd>
-				<dt>
-					<%= form.label :Website %>
-				</dt>
-				<dd>
-					<%= form.url_field :webpage %>
-				</dd>
-				<dt>
-					<%= form.label :Email%>
-				</dt>
-				<dd>
-					<%= form.email_field :email%>
-					<div class="email-explanation">Will not be shown or shared, only used to display <a href="http://www.gravatar.com">gravatar</a>.</div>
-				</dd>
-				<dt class="text-area-label">
-					<%= form.label :Comments, :class => "required"%>
-				</dt>
-				<dd class="text-area-field">
-					<%= form.text_area :content, :rows => 10, :cols => 24%>
-				</dd>
-				<p class="submit">
-					<%= form.submit "Post this comment" %>
-				</p>
-			</dl>
-		<% end %>
-	</div>
-</div>
+<%= render :partial => "comments/comments"%>

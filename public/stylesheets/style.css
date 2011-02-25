@@ -93,6 +93,7 @@ a {
         color: #8200a8; }
 
 .entry .entry-comments {
+  float: right;
   display: inline; }
   .entry .entry-comments a {
     color: #a6a6a6; }
