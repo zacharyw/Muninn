@@ -6,6 +6,7 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 gem 'gravtastic', '>= 2.1.0'
 gem 'haml'
 gem 'kaminari'
+gem 'acts-as-taggable-on'
 
 # Deploy with Capistrano
 # gem 'capistrano'
