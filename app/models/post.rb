@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
 	acts_as_taggable
+	acts_as_taggable_on :stores, :platforms
 
 	has_many :comments, :dependent => :destroy
 	
