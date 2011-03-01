@@ -50,7 +50,6 @@ img
 {
 	position: absolute;
 	right: 50px;
-	top: 255px;
 }
 
 #main-nav
@@ -72,7 +71,8 @@ img
 			background: none repeat scroll 0 0 $aux_color;
 			color: $aux_color*.7;
 			display: block;
-			padding: 4px 10px 6px;
+			padding-left: 10px;
+			padding-right: 10px;
 			text-decoration: none;
 			
 			&:hover
@@ -98,6 +98,7 @@ a
 #inner-container
 {
 	margin-left: 15px;
+	margin-top: 25px;
 	width: 580px;
 	float: left;
 	min-height: 600px;
@@ -143,6 +144,8 @@ a
 	{
 		font-family: Verdana, sans-serif;
 		font-weight: bold;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		a
 		{
 			color: $main_color;
@@ -150,13 +153,23 @@ a
 			text-decoration: none;
 		}
 	}
+	
+	.content
+	{
+		margin-bottom: 7px;
+	}
 }
 
 .entry 
 {		
+	margin-bottom: 30px;
 	.entry-comments
 	{
 		float: right;
+		font-size: .8em;
+		position: relative;
+		top: -30px;
+		left: -20px;
 		
 		a
 		{
@@ -170,7 +183,6 @@ a
 div.share_controls
 {
 	margin-top: 6px;
-	margin-bottom: 50px;
 	
 	.twitter, .facebook
 	{
@@ -180,6 +192,11 @@ div.share_controls
 	}
 }
 
+.controls
+{
+	display: inline;
+}
+
 .rss_image
 {
 	padding-left: 3px;	
@@ -187,6 +204,7 @@ div.share_controls
 
 .comments-header
 {
+	margin-top: 10px;
 	margin-bottom: 10px;
 	color: $aux_color*.7;
 }
@@ -238,6 +256,11 @@ div.share_controls
 	}
 }
 
+.reply
+{
+	margin-top: 10px;
+}
+
 div.reply-form 
 {
 	dt
@@ -281,8 +304,8 @@ div.reply dd textarea
 
 .date
 {
-	display: inline;
 	color: $aux_color*.7;
+	font-size: .8em;
 }
 
 .required

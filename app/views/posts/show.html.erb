@@ -2,8 +2,4 @@
 <% content_for :sidebar do %>
 	<%= render :partial=> "partials/sidebar"%>
 <% end %>
-<div class=<%="date"%>>
-	<%= @post.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
-</div>
-<%= render :partial => "partials/share", :locals => {:post => @post}%>
 <%= render :partial => "comments/comments"%>

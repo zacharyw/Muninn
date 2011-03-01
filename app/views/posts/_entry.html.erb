@@ -1,8 +1,4 @@
 <div class="entry">
 	<%= render :partial => "post", :locals => {:post => entry}%>
-	<div class=<%="date"%>>
-		<%= entry.created_at.strftime("Posted on %B %d, %Y at %I:%M %p") %>
-	</div>
 	<%= render :partial => "comments/entry_comments", :locals => {:entry => entry}%>
-	<%= render :partial => "partials/share", :locals => {:post => entry}%>
 </div>
