@@ -286,12 +286,16 @@ div.reply-form
 		text-align: left;
 		margin-left: 80px;
 		margin-bottom: 10px;
-		
-		.email-explanation
-		{
-			font-size: .8em;
-			font-style: italic;
-		}
+	
+	}
+	
+	div.email-explanation
+	{
+		font-size: .8em;
+		font-style: italic;
+		margin-left: 80px;
+		position: relative;
+		top: -10px;
 	}
 }
 

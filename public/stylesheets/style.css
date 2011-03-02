@@ -173,9 +173,12 @@ div.reply-form dd {
   text-align: left;
   margin-left: 80px;
   margin-bottom: 10px; }
-  div.reply-form dd .email-explanation {
-    font-size: .8em;
-    font-style: italic; }
+div.reply-form div.email-explanation {
+  font-size: .8em;
+  font-style: italic;
+  margin-left: 80px;
+  position: relative;
+  top: -10px; }
 
 div.reply dd textarea {
   width: 400px; }
