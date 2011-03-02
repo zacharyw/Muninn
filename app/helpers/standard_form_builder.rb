@@ -1,4 +1,20 @@
 class StandardFormBuilder < ActionView::Helpers::FormBuilder
+	
+	#Replace form submit input with styled buttons
+	def submit(label, *args)
+		options = args.extract_options!
+		new_class = "button"
+		new_class = options[:class] unless options[:class].nil?
+		super(label, *(args << options.merge(:class => new_class)))
+	end
+	
+=begin
+Generates form fields like this:
+<dt>Label</dt>
+<dd>field</dd>
+
+You can optionally pass in a class for the label on the field helper.
+=end
 	def self.create_tagged_field(method_name)
 		define_method(method_name) do |label, *args|
 	
