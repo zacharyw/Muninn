@@ -52,15 +52,14 @@ a {
     text-decoration: underline; }
 
 #inner-container {
-  margin-left: 15px;
-  margin-top: 25px;
-  width: 580px;
+  margin-left: 10px;
+  width: 630px;
   float: left;
   min-height: 600px; }
 
 #sidebar {
   float: right;
-  width: 370px; }
+  width: 340px; }
   #sidebar #twitter_feed {
     position: relative;
     top: 50px;
@@ -79,21 +78,35 @@ a {
   margin-bottom: 10px; }
 
 .post {
-  font-size: .9em;
-  line-height: 18px;
-  color: #2d2618;
-  font-family: sans-serif; }
+  color: #2d2618; }
   .post .title {
+    font-size: 32px;
     font-weight: bold;
     margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-family: sans-serif; }
     .post .title a {
       color: #2d2618;
       text-decoration: none; }
       .post .title a:hover {
         color: #8200a8; }
   .post .content {
-    margin-bottom: 7px; }
+    margin-bottom: 7px;
+    font-family: serif;
+    font-size: 18px;
+    line-height: 1.7em; }
+
+#posts {
+  margin-top: 25px; }
+  #posts ul {
+    list-style: none outside none; }
+    #posts ul li {
+      padding-bottom: 3px;
+      padding-left: 2px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #D8D9DE; }
+      #posts ul li .date {
+        float: right; }
 
 .entry {
   margin-bottom: 30px; }
@@ -161,7 +174,7 @@ div.share_controls {
       font-weight: bold; }
 
 .reply {
-  margin-top: 10px; }
+  margin-top: 40px; }
 
 div.reply-form dt {
   text-align: right;
@@ -184,6 +197,8 @@ div.reply-form div.email-explanation {
   margin-left: 80px;
   position: relative;
   top: -10px; }
+div.reply-form span.comment_submit {
+  margin-left: 80px; }
 
 div.reply dd textarea {
   width: 400px; }

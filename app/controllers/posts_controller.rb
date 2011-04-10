@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_filter :require_user, :except => [:index, :show]
 	
 	def index
-		@posts = Post.order("posts.created_at DESC").page(params[:page]).per(POSTS_PER_PAGE).includes(:comments)
+		@posts = Post.order("posts.created_at DESC").all
 	end
 	
 	def show

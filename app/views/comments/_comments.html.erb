@@ -15,7 +15,7 @@
 				<%= form.email_field :email%>
 				<div class="email-explanation">Will not be shown or shared, only used to display <a href="http://www.gravatar.com">gravatar</a>.</div>
 				<%= form.text_area :content, :rows => 10, :cols => 24, :label => "Comments", :label_class => "required"%>
-				<%= form.submit "Post this comment" %>
+				<span class="comment_submit"><%= form.submit "Post this comment" %></span>
 			<% end %>
 		</div>
 	</div>

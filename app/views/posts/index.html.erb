@@ -1,13 +1,9 @@
-<% content_for :script do %>
-	<%= javascript_include_tag 'endless-page' %>
-<% end %>
-
 <% content_for :sidebar do %>
 	<%= render :partial=> "partials/sidebar"%>
 <% end %>
 
 <div id="posts">
-	<%= render :partial => "entry", :collection => @posts, :locals => {:style_class => "entry"} %>
+	<ul>
+		<%= render :partial => "entry", :collection => @posts, :locals => {:style_class => "entry"} %>
+	</ul>
 </div>
-
-<%= paginate @posts %>

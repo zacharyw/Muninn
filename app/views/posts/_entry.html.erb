@@ -1,4 +1,4 @@
-<div class="entry">
-	<%= render :partial => "post", :locals => {:post => entry}%>
-	<%= render :partial => "comments/entry_comments", :locals => {:entry => entry}%>
-</div>
+<li>
+	<span class="title"><%=link_to entry.title, post_path(entry)%></span>
+	<span class="date"><%= entry.created_at.strftime("%B %d, %Y") %></span>
+</li>

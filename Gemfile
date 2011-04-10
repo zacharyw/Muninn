@@ -5,7 +5,6 @@ gem 'jquery-rails'
 gem 'authlogic'
 gem 'gravtastic', '2.1.3'
 gem 'haml'
-gem 'kaminari'
 gem 'acts-as-taggable-on'
 gem 'friendly_id'
 
