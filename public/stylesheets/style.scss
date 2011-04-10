@@ -46,6 +46,17 @@ $page_width: 980px;
 	{
 		margin-left: 40px;
 	}
+	
+	blockquote
+	{
+		margin: 0 50px 1.2em 50px;
+
+		padding-top: 20px;
+		padding-left:10px;
+		background-color: #D5D6DA;
+		border-top: 1px solid $main_color;
+		border-bottom: 1px solid $main_color;
+	}
 }
 
 body, html
