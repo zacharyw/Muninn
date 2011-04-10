@@ -7,7 +7,7 @@ gem 'gravtastic', '2.1.3'
 gem 'haml'
 gem 'acts-as-taggable-on'
 gem 'friendly_id'
-gem "RedCloth"
+gem 'RedCloth'
 gem 'paperclip'
 
 # Deploy with Capistrano
