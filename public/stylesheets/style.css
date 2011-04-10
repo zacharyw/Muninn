@@ -106,6 +106,8 @@ a {
     color: #5a4c30;
     margin-top: 10px;
     margin-bottom: 10px; }
+  #about p {
+    margin-bottom: 1.2em; }
   #about ul {
     list-style-type: square; }
   #about ul, #about ol {
@@ -136,6 +138,8 @@ a {
       color: #5a4c30;
       margin-top: 10px;
       margin-bottom: 10px; }
+    .post .content p {
+      margin-bottom: 1.2em; }
     .post .content ul {
       list-style-type: square; }
     .post .content ul, .post .content ol {
