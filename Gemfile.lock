@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.7-x86-mingw32)
     abstract (1.0.0)
     actionmailer (3.0.0)
       actionpack (= 3.0.0)
@@ -94,6 +95,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  RedCloth
   acts-as-taggable-on
   authlogic
   capistrano

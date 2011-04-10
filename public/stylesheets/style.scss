@@ -157,7 +157,28 @@ a
 		margin-bottom: 7px;
 		font-family: serif;
 		font-size: 18px;
-		line-height: 1.7em;
+		line-height: 1.5em;
+		
+		h2
+		{
+			font-size: 22px;
+			font-weight: bold;
+			font-family: sans-serif;
+			color: $main_color*2;
+			
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		
+		ul
+		{
+			list-style-type: square;
+		}
+		
+		ul, ol
+		{
+			margin-left: 40px;
+		}
 	}
 }
 
