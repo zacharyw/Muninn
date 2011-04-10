@@ -131,7 +131,7 @@ a
 	margin-left: 10px;
 	width: 630px;
 	float: left;
-	min-height: 600px;
+	min-height: 800px;
 }
 
 #sidebar
@@ -142,8 +142,34 @@ a
 	#twitter_feed
 	{
 		position: relative;
+		top: 65px;
+		right: -50px;
+	}
+	
+	.name
+	{
+		position:relative;
+		top:35px;
+		right: -50px;
+	}
+	
+	.apps
+	{
+		position: relative;
 		top: 50px;
-		right: -75px;
+		right: -50px;
+		
+		.app
+		{
+			margin-left: 10px;
+		}
+	}
+	
+	.links
+	{
+		position:relative;
+		right:-50px;
+		top:70px;
 	}
 }
 

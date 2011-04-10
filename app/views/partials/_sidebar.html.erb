@@ -1,1 +1,35 @@
+<div class="name">
+	<%=image_tag("name.png")%>
+</div>
+<div class="apps">
+	<span class="app">
+		<%=link_to(image_tag("facebook_big.png", :class=>"Facebook"), 'http://www.facebook.com/zacharyw')%>
+	</span>
+	<span class="app">
+		<%=link_to(image_tag("twitter_big.png", :class=>"Twitter"), 'http://www.twitter.com/#!/PragmaticZach')%>
+	</span>
+	<span class="app">
+		<%=link_to(image_tag("flickr_big.png", :class=>"Flickr"), 'http://www.flickr.com/photos/zachary_w/')%>
+	</span>
+	<span class="app">
+		<%=link_to(image_tag("github_big.png", :class=> "Github"), 'http://www.github.com/zacharyw')%>
+	</span>
+</div>
 <%=render :partial=>"partials/twitter"%>
+<div class="links">
+	<div class="link_title">
+		<%=image_tag("links.png")%>
+	</div>
+	<div class="link">
+		<%=link_to("CheapGamesInfo - Daily video game deals", "http://www.cheapgamesinfo.com")%>
+	</div>
+	<div class="link">
+		<%=link_to("SudoIt.org - C. Callebs programming blog", "http://www.sudoit.org")%>
+	</div>
+	<div class="link">
+		<%=link_to("GameTavern.net - Video game forums", "http://www.gametavern.net/forums")%>
+	</div>
+	<div class="link">
+		<%=link_to("NerdsOnTheRocks.com - All things nerd blog", "http://www.nerdsontherocks.com")%>
+	</div>
+</div>

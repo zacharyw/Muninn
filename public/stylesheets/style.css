@@ -58,15 +58,29 @@ a {
   margin-left: 10px;
   width: 630px;
   float: left;
-  min-height: 600px; }
+  min-height: 800px; }
 
 #sidebar {
   float: right;
   width: 340px; }
   #sidebar #twitter_feed {
     position: relative;
+    top: 65px;
+    right: -50px; }
+  #sidebar .name {
+    position: relative;
+    top: 35px;
+    right: -50px; }
+  #sidebar .apps {
+    position: relative;
     top: 50px;
-    right: -75px; }
+    right: -50px; }
+    #sidebar .apps .app {
+      margin-left: 10px; }
+  #sidebar .links {
+    position: relative;
+    right: -50px;
+    top: 70px; }
 
 #footer {
   clear: both;
