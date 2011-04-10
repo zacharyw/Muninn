@@ -1,6 +1,5 @@
 <div id="about">
-	<h2>About</h2>
-	<%=raw installation.about%>
+	<%=raw RedCloth.new(installation.about).to_html%>
 </div>
 <%=content_for :sidebar do%>
 	<%=render :partial => 'partials/twitter'%>

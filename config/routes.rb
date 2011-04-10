@@ -7,6 +7,8 @@ Muninn::Application.routes.draw do
   	end
 	end
 	
+	resources :images
+	
 	match "setup" => "users#new"
 	match "properties" => "users#edit", :id => 1, :as => :properties
 	match "about" => "users#show", :id => 1, :as => :about

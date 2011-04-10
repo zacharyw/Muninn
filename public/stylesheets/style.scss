@@ -14,6 +14,35 @@ $page_width: 980px;
 	}
 }
 
+@mixin content
+{
+	margin-bottom: 7px;
+	font-family: serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	
+	h1, h2
+	{
+		font-size: 22px;
+		font-weight: bold;
+		font-family: sans-serif;
+		color: $main_color*2;
+		
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	ul
+	{
+		list-style-type: square;
+	}
+	
+	ul, ol
+	{
+		margin-left: 40px;
+	}
+}
+
 body, html
 {
 	background: $background_color none repeat scroll 0 0;
@@ -81,6 +110,11 @@ img
 	}
 }
 
+.images
+{
+	margin-top: 20px;
+}
+
 a
 {
 	color: $link_color;
@@ -131,6 +165,11 @@ a
 	margin-bottom: 10px;
 }
 
+#about
+{
+	@include content;
+}
+
 .post
 {	
 	color: $main_color;
@@ -154,31 +193,7 @@ a
 	
 	.content
 	{
-		margin-bottom: 7px;
-		font-family: serif;
-		font-size: 18px;
-		line-height: 1.5em;
-		
-		h2
-		{
-			font-size: 22px;
-			font-weight: bold;
-			font-family: sans-serif;
-			color: $main_color*2;
-			
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-		
-		ul
-		{
-			list-style-type: square;
-		}
-		
-		ul, ol
-		{
-			margin-left: 40px;
-		}
+		@include content;
 	}
 }
 

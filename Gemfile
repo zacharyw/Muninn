@@ -8,6 +8,7 @@ gem 'haml'
 gem 'acts-as-taggable-on'
 gem 'friendly_id'
 gem "RedCloth"
+gem 'paperclip'
 
 # Deploy with Capistrano
 gem 'capistrano'

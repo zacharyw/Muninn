@@ -45,6 +45,9 @@ img {
         background-color: #F2F2F2;
         color: #8200a8; }
 
+.images {
+  margin-top: 20px; }
+
 a {
   color: #8200a8;
   text-decoration: none; }
@@ -77,6 +80,23 @@ a {
   left: 200px;
   margin-bottom: 10px; }
 
+#about {
+  margin-bottom: 7px;
+  font-family: serif;
+  font-size: 18px;
+  line-height: 1.5em; }
+  #about h1, #about h2 {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #5a4c30;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  #about ul {
+    list-style-type: square; }
+  #about ul, #about ol {
+    margin-left: 40px; }
+
 .post {
   color: #2d2618; }
   .post .title {
@@ -95,7 +115,7 @@ a {
     font-family: serif;
     font-size: 18px;
     line-height: 1.5em; }
-    .post .content h2 {
+    .post .content h1, .post .content h2 {
       font-size: 22px;
       font-weight: bold;
       font-family: sans-serif;

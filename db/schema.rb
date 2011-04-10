@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410002132) do
+ActiveRecord::Schema.define(:version => 20110410032600) do
 
   create_table "comments", :force => true do |t|
     t.string   "author"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(:version => 20110410002132) do
     t.string   "webpage"
     t.text     "content"
     t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.string   "image_file_size"
+    t.string   "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +67,22 @@ ActiveRecord::Schema.define(:version => 20110410002132) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "tiny_prints", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_file_size"
+    t.string   "image_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tiny_videos", :force => true do |t|
+    t.string   "original_file_name"
+    t.string   "original_file_size"
+    t.string   "original_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

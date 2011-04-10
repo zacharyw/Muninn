@@ -1,0 +1,5 @@
+<div class="images">
+<%= "http://www.likeawritingdesk.com" + @image.image.url %>
+<%= image_tag @image.image.url %>
+<%= link_to "Delete", image_path(@image), :class => "negative button", :method => "delete"%>
+</div>

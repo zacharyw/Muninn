@@ -42,6 +42,7 @@
 					<li><%=link_to "Setup", setup_path%></li>
 				<% end %>
 				<% if current_user %>
+					<li><%=link_to "Images", images_path%>
 					<li><%=link_to "New Post", new_post_path%></li>
 					<li><%=link_to "Edit Install", properties_path%></li>
 					<li><%=link_to "Logout", logout_path%></li>

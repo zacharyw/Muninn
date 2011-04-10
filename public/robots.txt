@@ -10,3 +10,4 @@ Disallow: /properties
 Disallow: /logout
 Disallow: /about
 Disallow: /setup
+Disallow: /images
