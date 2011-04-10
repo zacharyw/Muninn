@@ -2,7 +2,14 @@ class ApplicationController < ActionController::Base
 	helper :all
   protect_from_forgery
   
+  after_filter :discard_flash_if_xhr
+  
   helper_method :current_user, :current_user_session, :installed?, :twitter?, :installation
+  
+  protected
+  def discard_flash_if_xhr
+    flash.discard if request.xhr?
+  end
   
   private
     def current_user_session
@@ -45,7 +52,7 @@ class ApplicationController < ActionController::Base
       if current_user
         store_location
         flash[:notice] = "You must be logged out to access this page."
-        redirect_to account_url
+        redirect_to root_url
         return false
       end
     end

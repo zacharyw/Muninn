@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%=installation.title%></title>
+  <title>
+  	<% if @post.nil?%>
+  		<%=installation.title%>
+		<% else %>
+		<%= @post.title %> - <%= installation.title %>
+		<% end %>
+	</title>
   <%= stylesheet_link_tag 'reset' %>
   <%= stylesheet_link_tag 'style' %>
   <%= stylesheet_link_tag 'css3buttons'%>

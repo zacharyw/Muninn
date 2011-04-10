@@ -11,7 +11,7 @@
 					<div class="author">
 						<%=comment.author + comment.created_at.strftime(" on %B %d, %Y at %I:%M %p") %>
 					</div>
-					<% if !comment.webpage.empty? %>
+					<% if !comment.webpage.blank? %>
 						<div class="webpage">
 							<%= auto_link comment.webpage %>
 						</div>

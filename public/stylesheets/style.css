@@ -115,6 +115,11 @@ div.share_controls {
     vertical-align: top;
     display: inline;
     cursor: pointer; }
+  div.share_controls .share_icons {
+    float: left; }
+    div.share_controls .share_icons .share_icon {
+      cursor: pointer;
+      display: inline; }
 
 .controls {
   display: inline; }

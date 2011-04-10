@@ -188,6 +188,17 @@ div.share_controls
 		display: inline;
 		cursor: pointer;
 	}
+	
+	.share_icons
+	{
+		float: left;
+		
+		.share_icon
+		{
+			cursor: pointer;
+			display:inline;
+		}
+	}
 }
 
 .controls

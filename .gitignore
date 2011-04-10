@@ -5,4 +5,5 @@ tmp/**/*
 config/database.yml
 .eprj
 public/stylesheets/*.sass-cache
+config/deploy.rb
 
