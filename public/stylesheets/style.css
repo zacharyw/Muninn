@@ -119,6 +119,9 @@ a {
     background-color: #D5D6DA;
     border-top: 1px solid #2d2618;
     border-bottom: 1px solid #2d2618; }
+  #about .syntaxhighlighter {
+    font: monaco, "Courier New", sans-serif;
+    font-size: 12px; }
 
 .post {
   color: #2d2618; }
@@ -158,6 +161,9 @@ a {
       background-color: #D5D6DA;
       border-top: 1px solid #2d2618;
       border-bottom: 1px solid #2d2618; }
+    .post .content .syntaxhighlighter {
+      font: monaco, "Courier New", sans-serif;
+      font-size: 12px; }
 
 #posts {
   margin-top: 25px; }

@@ -57,6 +57,12 @@ $page_width: 980px;
 		border-top: 1px solid $main_color;
 		border-bottom: 1px solid $main_color;
 	}
+	
+	.syntaxhighlighter
+	{
+		font: monaco, "Courier New", sans-serif;
+		font-size: 12px;
+	}
 }
 
 body, html
